@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Erdős Problem #326 (JSP-000272): a minimal asymptotic basis of order 2 with a_k/k^2 -> 1/10000"
+abstract: "Resolution of Erdős Problem #326: an explicit minimal asymptotic additive basis of order 2 with c'_k / k^2 -> 1/10000, built from two coprime prime-step Cassels bases and a stage-by-stage witness construction. Includes a Lean 4 + Mathlib formalization of the full construction. Code is MIT-licensed; proof text is CC BY 4.0."
+type: software
+authors:
+  - name: "Liang Wan Yiu David"
+version: "1.0"
+date-released: "2026-11-23"
+license: CC-BY-4.0
+repository-code: "https://github.com/davidlueng986-alt/erdos-326-lean-proof"
+keywords:
+  - Erdős problem 326
+  - JSP-000272
+  - minimal asymptotic basis
+  - additive bases
+  - Cassels bases
