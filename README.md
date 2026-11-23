@@ -6,6 +6,8 @@
 
 Author: Liang Wan Yiu David
 
+I’m a high school student with a passion for mathematics and a particular interest in open problems in additive number theory.
+
 ## Construction in brief
 
 1. Two coprime prime-step Cassels bases A^(1), A^(2) (primes from Bertrand's postulate in disjoint dyadic windows), each an exact basis of order 2.
