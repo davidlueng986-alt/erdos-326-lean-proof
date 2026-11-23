@@ -1,0 +1,89 @@
+version: "v0.4"
+
+project:
+  name: "Erdős Problem 326: a minimal asymptotic additive basis with a quadratic limit"
+  description: >-
+    A Lean formalization of an affirmative answer to Erdős Problem 326:
+    there exists a minimal asymptotic additive basis of order two whose
+    increasing enumeration, divided by the square of its index, converges
+    to a nonzero real constant. The proof constructs a basis with limit
+    1/10000 using prime-step Cassels bases and stage-by-stage witnesses.
+  authors: ["Liang Wan Yiu David"]
+  license: "MIT"
+  responsible_maintainers: ["Liang Wan Yiu David"]
+
+classification:
+  arxiv: ["math.NT"]
+  msc2020: ["11B13", "03B35"]
+
+sources:
+  - title: "Erdős Problem 326: a minimal asymptotic basis of order 2 with a quadratic limit"
+    authors: ["Liang Wan Yiu David"]
+    type: "manuscript"
+    location: "https://github.com/davidlueng986-alt/erdos-326-lean-proof/blob/70c8cd1bad641f449a8532ea8e874e241387daca/proof/PROOF.md"
+    relationship: "formalizes"
+    license: "CC-BY-4.0"
+  - title: "Old and new problems and results in combinatorial number theory"
+    authors: ["Paul Erdős", "Ronald L. Graham"]
+    type: "book"
+    location: "Monographies de L'Enseignement Mathématique (1980), p. 47"
+    relationship: "background"
+  - title: "Cassels bases"
+    authors: ["Melvyn B. Nathanson"]
+    type: "paper"
+    location: "http://www.theoryofnumbers.com/melnathanson/pdfs/nath2010-138.pdf"
+    relationship: "background"
+    note: "Theorem 6 describes the prime-step bases used in the construction."
+  - title: "Erdős Problems forum discussion of problem 326"
+    type: "web post"
+    location: "https://www.erdosproblems.com/forum/thread/326"
+    relationship: "background"
+    note: "Aron Bhalla posted an earlier proof claim, followed by a Lean formalization report. This submission does not assert priority."
+
+status:
+  scope: >-
+    The compared theorem proves the existence of a minimal asymptotic
+    additive basis of order two with nonzero quadratic limit, with no
+    additional hypotheses. The fixed value 1/10000 is proved separately
+    in the repository and is not part of this Comparator claim.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+automation:
+  methods:
+    - method: "other"
+      models: []
+      framework: "not specified"
+      tool_setup: "AI assistance in Lean formalization and proof verification"
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "not specified"
+      prompting_notes: "not specified"
+  spend_usd: "not tracked"
+  notes: "The public repository discloses AI assistance; the submitted declarations can be checked independently with Lean."
+
+fidelity:
+  divergences: >-
+    The Lean proof refines stage boundaries relative to the manuscript:
+    it completes the witness bin before freezing it and replaces deleted
+    endpoints within their own bins. The compared theorem uses the cofinite
+    pointwise sum predicate, the unfolded order-two predicate in Formal
+    Conjectures. The advertised existence statement has no extra hypotheses.
+
+review:
+  status: "self-assessed"
+  reviewers: ["none"]
+  notes: "The repository documents Lean verification. No independent mathematical peer review is claimed."
+
+alignment:
+  namespace: "Erdos326"
+  statements:
+    - source: "Erdős Problem 326; Erdős and Graham (1980), p. 47"
+      lean: "Erdos326.palomar_erdos_326"
+      module: "Solution"
+      status: "proved"
+      note: "Affirmative existence result, with minimality under set inclusion and nonzero quadratic limit."
+
+acknowledgements: "Lean, Mathlib, the Formal Conjectures project, and the Erdős Problems catalogue."
